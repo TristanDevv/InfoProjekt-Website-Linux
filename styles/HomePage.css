@@ -1,8 +1,24 @@
 
-#HomePageImage {
+.HeaderImage {
     height: 100vh;
-    width: 100vw; /* Make sure it adjusts to full viewport width */
+    width: 100%; 
     object-fit: cover;
+}
+
+.menu {
+    position: absolute;
+    font-size: 3vh;
+    width: 25%;
+    margin: 1vw;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu > a {
+    color: white;
+    text-decoration: none;
+    
 }
 
 body, html {
