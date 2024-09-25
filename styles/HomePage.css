@@ -1,0 +1,13 @@
+
+#HomePageImage {
+    height: 100vh;
+    width: 100vw; /* Make sure it adjusts to full viewport width */
+    object-fit: cover;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
