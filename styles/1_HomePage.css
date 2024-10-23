@@ -1,14 +1,35 @@
-
-#HeaderImage {
+/* Container to hold the image and text */
+.image-container {
+    position: relative;
+    width: 100%;
     height: 100vh;
-    width: 100%; 
-    object-fit: cover;
 }
 
+/* Image styling */
+#HeaderImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; /* The image is placed in the background */
+    z-index: -1;
+}
+
+/* Text styling */
+.image-container a {
+    position: absolute;
+    color: aqua;
+    background-color: aqua;
+    height: 100%;
+    width: 25%;
+    opacity: 0;
+    right: 0; /* Aligns the link to the right side */
+}
+
+/* General body settings */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
     width: 100%;
+    overflow: hidden;
 }
