@@ -3,23 +3,6 @@
     height: 100vh;
     width: 100%; 
     object-fit: cover;
-
-}
-
-.menu {
-    position: absolute;
-    font-size: 3vh;
-    width: 25%;
-    margin: 1vw;
-
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu > a {
-    color: white;
-    text-decoration: none;
-    
 }
 
 body, html {
@@ -27,4 +10,5 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden;
+    background-color: rgb(14, 14, 14),
 }
