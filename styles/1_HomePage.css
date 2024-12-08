@@ -1,14 +1,5 @@
 
-/* Text styling */
-.Heading a {
-    position: absolute;
-    color: aqua;
-    background-color: aqua;
-    height: 100%;
-    width: 25%;
-    opacity: 0;
-    right: 0;
-}
+
 
 /* General body settings */
 body, html {
@@ -21,6 +12,31 @@ body, html {
     color: whitesmoke;
 }
 
-.content h1 {
+header {
+    position: relative;
+    z-index: 1; /* Niedrigere Schicht */
+}
+
+#heading {
     text-align: center;
+    font-size: 10vh;
+    margin-top: 3vh;
+}
+
+
+#forward, #backwards {
+    position: absolute; /* Damit wir die Position exakt anpassen können */
+    top: 0; /* Start oben */
+    height: 100vh; /* Vollbild-Höhe */
+    background-color: transparent; /* Unsichtbar */
+}
+
+#forward {
+    right: 0; /* Rechtsbündig */
+    width: 50%; /* Rechte Hälfte */
+}
+
+#backwards {
+    left: 0; /* Linksbündig */
+    width: 50%; /* Linke Hälfte */
 }
