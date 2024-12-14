@@ -8,10 +8,6 @@ html, body {
     color: whitesmoke;
 }
 
-html:hover, body:hover {
-    cursor: none;
-}
-
 #forward, #backwards {
     z-index: 10;
     top: 0;
@@ -19,6 +15,16 @@ html:hover, body:hover {
     background-color: transparent;
     width: 50%;
     position: absolute;
+}
+
+#forward:hover, #backwards:hover {
+    z-index: 10;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    background-color: transparent;
+
+    cursor: none;
 }
 
 #forward {
