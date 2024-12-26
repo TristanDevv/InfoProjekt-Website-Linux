@@ -2,7 +2,7 @@ const fs = require("fs")
 const date = new Date()
 
 //file paths
-const txt_file = "Update[Payloader]/latest-updates[number].txt"
+const txt_file = "Update[Payloader]/latest-updates[6h].txt"
 const csv_file = "Update[Payloader]/update.csv"
 const csv_total_update_count_txt = "Update[Payloader]/csv_update_count.txt"
 
@@ -56,6 +56,12 @@ const csv_date_string = `\nUpdate on ${date_args.month}/${date_args.day}/${date_
 fs.appendFile(csv_file, csv_date_string, "utf-8", (err) => {
     if (err) {
         console.log("Error")
+    } else console.log("Success")
+})
+
+fs.writeFile(csv_total_update_count_txt, total_update_count_csv.toString(), "utf-8", (err) => {
+    if (err) {
+        console.log(err)
     } else console.log("Success")
 })
 
