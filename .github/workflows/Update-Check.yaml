@@ -42,7 +42,7 @@ jobs:
       # Push changes
       - name: Push changes
         env:
-          GH_TOKEN: ${{ secrets.key }}
+          GH_TOKEN: ${{ secrets.KEY }}
         run: |
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/TristanSimonDev/InfoProjekt-Website-Linux.git
           git push origin main
