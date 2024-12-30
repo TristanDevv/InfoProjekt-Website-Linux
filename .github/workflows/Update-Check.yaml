@@ -26,4 +26,4 @@ jobs:
 
       # Run a custom Node.js script
       - name: Run Update Checker
-        run: node Update[Payloader]\update-timer.js
+        run: node Update[Payloader]/update-timer.js
