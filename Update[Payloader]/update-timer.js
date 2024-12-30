@@ -44,11 +44,11 @@ update_count_txt += 1 //add +1 to the update count
     so the time will stand still and show a correct 6 hour diffrence.
     example: date_string = 4 Total Updates in the last 6 hours between 14 - 20
 */
-if (update_count_txt > 1) {
-    date_string = `${update_count_txt} Total Updates in the last 6 hours between ${args_txt[9]} - ${args_txt[11]}`;
-} else {
-    date_string = `${update_count_txt} Total Updates in the last 6 hours between ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour}:${date_args.minutes} - ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour + 6}:${date_args.minutes}UTC`;
-}
+//if (update_count_txt >= 1) {
+date_string = `${update_count_txt} Total Updates in the last 6 hours between ${args_txt[9]} - ${args_txt[11]}`;
+
+//date_string = `${update_count_txt} Total Updates in the last 6 hours between ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour}:${date_args.minutes} - ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour + 6}:${date_args.minutes}UTC`;
+
 
 //the update string for the csv file
 const csv_date_string = `\nUpdate on ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour}:${date_args.minutes}UTC,${total_update_count_csv}`
