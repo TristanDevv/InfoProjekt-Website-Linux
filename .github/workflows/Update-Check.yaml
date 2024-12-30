@@ -34,8 +34,7 @@ jobs:
 
       # Commit changes
       - name: Commit changes
-        run: |
-          git commit --allow-empty -m "auto-update" || echo "No changes to commit"
+        run: git commit --allow-empty -m "auto-update" || echo "No changes to commit"
 
       # Push changes
       - name: Push changes

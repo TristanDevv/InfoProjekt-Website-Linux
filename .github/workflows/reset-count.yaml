@@ -1,0 +1,38 @@
+name: rest-update_count.txt[6h]
+
+on:
+  schedule:
+    - cron: " 0,6,12,18 * * *"   # <=== 0,6,12,18 UTC
+
+jobs:
+  run-node-script:
+    runs-on: ubuntu-22.04
+
+    steps:
+      # Check out the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  
+      
+      - name: Install Dependencies
+        run: npm install
+
+      - name: run the script
+        run: node Update[Payloader]\reset_updatest[6h].js
+
+      - name: add the changes
+        run: git add .
+
+      - name: commit the changes
+        run: git commit --allow-empty -m "Resetting Update[Payloader]\latest-updates[6h].txt file"
+
+      - name: push the changes
+        env:
+          GH_TOKEN: ${{ secrets.key }}
+        run: |
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/TristanSimonDev/InfoProjekt-Website-Linux.git
+          git push origin main
