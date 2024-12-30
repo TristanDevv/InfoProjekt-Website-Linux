@@ -27,3 +27,12 @@ jobs:
       # Run a custom Node.js script
       - name: Run Update Checker
         run: node Update[Payloader]/update-timer.js
+
+      - name: Run Git add .
+        run: git add .
+
+      - name: Run git commit
+      run: git commit -m "auto-update"
+
+      - name: Run git push 
+      run: git push origin main
