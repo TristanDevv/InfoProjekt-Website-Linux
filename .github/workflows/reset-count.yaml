@@ -2,7 +2,7 @@ name: rest-update_count.txt[6h]
 
 on:
   schedule:
-    - cron: " 0,6,12,18 * * *"   # <=== 0,6,12,18 UTC
+    - cron: "0 0,6,12,18 * * *"   # 0,6,12,18 UTC
 
 jobs:
   run-node-script:
