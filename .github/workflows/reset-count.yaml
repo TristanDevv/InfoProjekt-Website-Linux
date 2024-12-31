@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: run the script
-        run: node Update[Payloader]\reset_updatest[6h].js
+        run: node Update[Payloader]/reset_updatest[6h].js
 
       - name: add the changes
         run: git add .
