@@ -28,6 +28,12 @@ jobs:
       - name: Run Update Checker
         run: node "Update[Payloader]/update-timer.js"
 
+      - name: Configure Git Identity
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "github-actions@github.com"
+
+
       # Stage changes (git add)
       - name: Stage changes
         run: git add .

@@ -8,7 +8,7 @@ const csv_total_update_count_txt = "Update[Payloader]/csv_update_count.txt"
 
 const read_file_to_array = (file_path) => {
     try {
-        return fs.readFileSync(file_path, "utf-8").split(" ") //make the file data in arrays for example ["hello", "how", "are", "you"]
+        return fs.readFileSync(file_path, "utf-8").split(" ") //make the file data in arrays for example: ["hello", "how", "are", "you"]
     } catch (err) {
         console.error(`Error while reading the data and put it to an array on line ${process.argv[1]}:9`)
         return[] //if there was an error return an empty array
@@ -17,7 +17,6 @@ const read_file_to_array = (file_path) => {
 
 //split the data into Arrays
 const args_txt = read_file_to_array(txt_file)
-const args_csv = read_file_to_array(csv_file)
 const args_update_count = read_file_to_array(csv_total_update_count_txt)
 
 //Date Settings
@@ -39,16 +38,10 @@ let update_count_txt = parseInt(args_txt[0]) //uses the first number/string on t
 isNaN (update_count_txt) ? update_count_txt = 0 : update_count_txt; //check if its a number
 update_count_txt += 1 //add +1 to the update count
 
-/*
-    if the update_count in the txt file is bigger than 1 then use the time from the reading.
-    so the time will stand still and show a correct 6 hour diffrence.
-    example: date_string = 4 Total Updates in the last 6 hours between 14 - 20
-*/
-//if (update_count_txt >= 1) {
-date_string = `${update_count_txt} Total Updates in the last 6 hours between ${args_txt[9]} - ${args_txt[11]}`;
 
+//example: date_string = 4 Total Updates in the last 6 hours between 14 - 20
+let date_string = `${update_count_txt} Total Updates in the last 6 hours between ${args_txt[9]} - ${args_txt[11]}`;
 //date_string = `${update_count_txt} Total Updates in the last 6 hours between ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour}:${date_args.minutes} - ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour + 6}:${date_args.minutes}UTC`;
-
 
 //the update string for the csv file
 const csv_date_string = `\nUpdate on ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour}:${date_args.minutes}UTC,${total_update_count_csv}`
