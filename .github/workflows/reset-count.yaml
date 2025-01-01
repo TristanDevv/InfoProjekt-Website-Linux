@@ -30,8 +30,8 @@ jobs:
       # Step 5: Configure Git identity
       - name: Configure Git Identity
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "github-actions@github.com"
+          git config --global user.name "TristanSimonDev"
+          git config --global user.email "simontristandev@gmail.com"
 
       # Step 6: Stage changes
       - name: Add the changes
