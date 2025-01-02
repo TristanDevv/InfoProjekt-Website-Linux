@@ -2,46 +2,39 @@ name: rest-update_count.txt[6h]
 
 on:
   schedule:
-    - cron: "0 0,12 * * *"   # Run at 00:00, 06:00, 12:00, 18:00 UTC
+    - cron: "0 0,12 * * *"  
 
 jobs:
   run-node-script:
     runs-on: ubuntu-22.04
 
     steps:
-      # Step 1: Check out the repository
+   
       - name: Checkout Code
         uses: actions/checkout@v3
-
-      # Step 2: Set up Node.js
+  
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18  
       
-      # Step 3: Install dependencies
       - name: Install Dependencies
         run: npm install
 
-      # Step 4: Run the Node.js script
       - name: Run the script
         run: node "Update[Payloader]/reset_updatest[6h].js"
 
-      # Step 5: Configure Git identity
       - name: Configure Git Identity
         run: |
           git config --global user.name "TristanSimonDev"
           git config --global user.email "simontristandev@gmail.com"
 
-      # Step 6: Stage changes
       - name: Add the changes
         run: git add .
 
-      # Step 7: Commit the changes
       - name: Commit the changes
         run: git commit --allow-empty -m "Resetting Update[Payloader]\latest-updates[6h].txt file"
 
-      # Step 8: Push changes to the repository
       - name: Push the changes
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
