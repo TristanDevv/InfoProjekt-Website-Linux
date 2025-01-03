@@ -1,4 +1,4 @@
-name: rest-update_count.txt[6h]
+name: rest-update_count.txt[12h]
 
 on:
   schedule:
@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Run the script
-        run: node "Update[Payloader]/reset_updatest[6h].js"
+        run: node "Update[Payloader]/reset_updatest[12h].js"
 
       - name: Configure Git Identity
         run: |
@@ -33,7 +33,7 @@ jobs:
         run: git add .
 
       - name: Commit the changes
-        run: git commit --allow-empty -m "Resetting Update[Payloader]\latest-updates[6h].txt file"
+        run: git commit --allow-empty -m "Resetting Update[Payloader]\latest-updates[12h].txt file"
 
       - name: Push the changes
         env:
