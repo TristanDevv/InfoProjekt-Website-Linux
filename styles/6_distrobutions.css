@@ -33,3 +33,33 @@ html, body {
 #backwards {
     left: 0;
 }
+
+#heading_text {
+    text-align: center;
+    top: 3vh;
+    font-size: 10vh;
+    margin: 5vh;
+}
+
+#nd_heading {
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+#cluster {
+    display: flex;
+}
+
+img {
+    width: 40vh;
+    object-fit: cover;
+}
+
+#image {
+    margin-left: 30vh;
+}
+
+#beliebte-distributionen {
+    font-size: 4vh;
+    margin-left: 30vh;
+}

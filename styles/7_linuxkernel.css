@@ -33,3 +33,31 @@ html, body {
 #backwards {
     left: 0;
 }
+
+#heading_text {
+    text-align: center;
+    top: 3vh;
+    font-size: 10vh;
+    margin: 5vh;
+}
+
+#main {
+    display: flex;
+    font-size: 3.2vh;
+}
+
+#main li {
+    margin-top: 3vh;
+}
+
+#section {
+    margin-left: 10vh;
+    margin-right: 3vh;
+}
+
+img {
+    margin-left: 7vh;
+    margin-bottom: 5vh;
+    object-fit: cover;
+    width: 95vh;
+}
