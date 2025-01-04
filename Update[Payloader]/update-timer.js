@@ -2,7 +2,7 @@ const fs = require("fs")
 const date = new Date()
 
 //file paths
-const txt_file = "Update[Payloader]/latest-updates[6h].txt"
+const txt_file = "Update[Payloader]/latest-updates[12h].txt"
 const csv_file = "Update[Payloader]/update.csv"
 const csv_total_update_count_txt = "Update[Payloader]/csv_update_count.txt"
 

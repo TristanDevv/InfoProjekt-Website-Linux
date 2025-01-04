@@ -33,3 +33,27 @@ html, body {
 #backwards {
     left: 0;
 }
+
+#heading_text {
+    text-align: center;
+    top: 3vh;
+    font-size: 15vh;
+    margin: 5vh;
+}
+
+#list {
+    text-align: center;
+    font-size: 3vh;
+}
+
+#list ul {
+    display: inline-block;
+    text-align: left;
+}
+
+#list li {
+    padding-bottom: 2vh;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
