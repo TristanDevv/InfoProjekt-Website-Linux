@@ -33,3 +33,7 @@ html, body {
 #backwards {
     left: 0;
 }
+
+#heading_text {
+    text-align: center;
+}
