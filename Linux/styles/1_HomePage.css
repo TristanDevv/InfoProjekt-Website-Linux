@@ -1,0 +1,45 @@
+
+/* General body settings */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(10, 10, 40);
+    color: whitesmoke;
+}
+
+#main_container {
+    width: 100%; /* Ensure it covers the full width */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Makes the h1 position relative to this container */
+    text-align: center;
+    color: whitesmoke;
+}
+
+h1 {
+    position: absolute; /* Position the text absolutely within the container */
+    top: 3vh; /* 3% from the top */
+    left: 50%; /* Horizontally center the text */
+    transform: translateX(-50%); /* Adjust for the exact center */
+    font-size: 15vh; /* Optional: Adjust the font size */
+}
+
+
+#forward, #backwards {
+    position: absolute; /* Damit wir die Position exakt anpassen können */
+    top: 0; /* Start oben */
+    height: 100vh; /* Vollbild-Höhe */
+    background-color: transparent; /* Unsichtbar */
+    width: 50%;
+    z-index: 10;
+}
+
+#forward {
+    right: 0; /* Rechtsbündig */
+}
+
+#backwards {
+    left: 0; /* Linksbündig */
+}

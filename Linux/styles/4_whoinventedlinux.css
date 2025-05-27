@@ -1,0 +1,92 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(10, 10, 40);
+    color: whitesmoke;
+}
+
+#forward, #backwards {
+    z-index: 10;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    background-color: transparent;
+}
+
+#forward:hover, #backwards:hover {
+    z-index: 10;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    background-color: transparent;
+
+    cursor: none;
+}
+
+#forward {
+    right: 0;
+}
+
+#backwards {
+    left: 0;
+}
+
+#heading_text {
+    text-align: center;
+    top: 3vh;
+    font-size: 15vh;
+    margin: 5vh;
+}
+
+img {
+    object-fit: cover;
+    width: 45vh;
+    position: absolute;
+    right: 10vh;
+}
+
+#lists {
+    display:flex;
+    align-items: center; /* Zentriert die Inhalte vertikal */
+}
+
+
+#list1 {
+    width: 30vh;
+    margin-left: 30vh;
+    background-color: gray;
+    padding: 5vh;
+
+    border-radius: 2vh;
+}
+
+#list2 {
+    width: 30vh;
+    margin-left: 25vh;
+    background-color: gray;
+    padding: 5vh;
+
+    border-radius: 2vh;
+}
+
+#list1 li {
+    margin-top: 1vh;
+    font-size: 2.1vh;
+}
+
+#list1 h2 {
+    font-size: 3vh;
+}
+
+#list2 li {
+    margin-top: 1vh;
+    font-size: 2.1vh;
+}
+
+#list2 h2 {
+    font-size: 3vh;
+}
+
