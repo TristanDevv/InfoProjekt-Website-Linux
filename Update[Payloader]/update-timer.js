@@ -4,7 +4,7 @@ const date = new Date()
 //file paths
 const txt_file = "Update[Payloader]/latest-updates[12h].txt"
 const csv_file = "Update[Payloader]/update.csv"
-const csv_total_update_count_txt = "Update[Payloader]/csv_update_count.txt"
+const csv_total_update_count_txt = "Update[Payloader]/update_count.txt"
 
 const read_file_to_array = (file_path) => {
     try {
@@ -41,6 +41,7 @@ update_count_txt += 1 //add +1 to the update count
 
 //example: date_string = 4 Total Updates in the last 12 hours between 14 - 20
 let date_string = `${update_count_txt} Total Updates in the last 12 hours between ${args_txt[9]} - ${args_txt[11]}`;
+console.log(`${update_count_txt} Total Updates in the last 12 hours between ${args_txt[9]} - ${args_txt[11]}`)
 //date_string = `${update_count_txt} Total Updates in the last 12 hours between ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour}:${date_args.minutes} - ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour + 6}:${date_args.minutes}UTC`;
 
 //the update string for the csv file

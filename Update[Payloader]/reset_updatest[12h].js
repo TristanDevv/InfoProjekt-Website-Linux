@@ -13,7 +13,8 @@ const date_args = {
 }
 
 const date_string = `0 Total Updates in the last 12 hours between ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour}:${date_args.minutes} - ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour + 6}:${date_args.minutes}UTC`;
-
+console.log( `0 Total Updates in the last 12 hours between ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour}:${date_args.minutes} - ${date_args.month}/${date_args.day}/${date_args.year}...${date_args.hour + 6}:${date_args.minutes}UTC`)
+ 
 
 fs.writeFile(txt_file, date_string, "utf-8", (err) => {
     if (err) {
